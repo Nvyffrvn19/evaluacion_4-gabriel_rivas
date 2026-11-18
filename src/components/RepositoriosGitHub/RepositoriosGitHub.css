@@ -1,0 +1,107 @@
+.repositorios-github {
+  padding: 3rem 1.25rem;
+  background-color: var(--color-hueso);
+  color: var(--color-carbon);
+}
+
+.repositorios-github__etiqueta {
+  margin-bottom: 1rem;
+  color: var(--color-camisa);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+}
+
+.repositorios-github__titulo {
+  margin-bottom: 2.5rem;
+  font-family: var(--fuente-titulos);
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.08rem;
+  text-transform: uppercase;
+}
+
+.repositorios-github__lista {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.repositorios-github__tarjeta {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 0;
+  padding: 1.5rem;
+  border: 1px solid var(--color-carbon);
+}
+
+.repositorios-github__tarjeta h3 {
+  margin-bottom: 0;
+  overflow-wrap: anywhere;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.repositorios-github__tarjeta p {
+  flex: 1;
+  margin-bottom: 0;
+  overflow-wrap: anywhere;
+}
+
+.repositorios-github__datos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+  color: var(--color-camisa);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.repositorios-github__tarjeta a {
+  align-self: flex-start;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-carbon);
+  background-color: var(--color-rosa);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.repositorios-github__tarjeta a:hover {
+  background-color: var(--color-carbon);
+  color: var(--color-blanco);
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .repositorios-github {
+    padding: 4rem 2rem;
+  }
+
+  .repositorios-github__titulo {
+    font-size: 3rem;
+  }
+
+  .repositorios-github__lista {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .repositorios-github {
+    padding: 6rem 4rem;
+  }
+
+  .repositorios-github__titulo {
+    font-size: 4rem;
+    letter-spacing: -0.12rem;
+  }
+
+  .repositorios-github__lista {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

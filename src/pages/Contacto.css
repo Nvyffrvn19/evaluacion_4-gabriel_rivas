@@ -1,0 +1,174 @@
+#contacto {
+  padding: 3rem 1.25rem;
+  background-color: var(--color-camisa);
+  color: var(--color-blanco);
+}
+
+.contacto__numero {
+  margin-bottom: 1rem;
+  color: var(--color-hueso);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+}
+
+.contacto__contenido {
+  margin-bottom: 2.5rem;
+}
+
+#titulo-contacto {
+  margin-bottom: 1.5rem;
+  font-family: var(--fuente-titulos);
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.08rem;
+  text-transform: uppercase;
+}
+
+.contacto__descripcion {
+  max-width: 38rem;
+  margin-bottom: 2rem;
+}
+
+.contacto__datos {
+  font-style: normal;
+}
+
+.contacto__datos p {
+  margin-bottom: 0.75rem;
+}
+
+.contacto__datos a {
+  color: var(--color-blanco);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
+.contacto__datos a:hover {
+  color: var(--color-rosa);
+}
+
+.contacto__formulario p {
+  margin-bottom: 1.25rem;
+}
+
+.contacto__formulario label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.contacto__formulario input,
+.contacto__formulario textarea {
+  padding: 0.85rem;
+  border: 1px solid var(--color-blanco);
+  border-radius: 0;
+  background-color: transparent;
+  color: var(--color-blanco);
+}
+
+.contacto__formulario textarea {
+  min-height: 8rem;
+}
+
+.contacto__formulario input:hover,
+.contacto__formulario textarea:hover,
+.contacto__formulario input:focus,
+.contacto__formulario textarea:focus {
+  border-color: var(--color-rosa);
+}
+
+.contacto__formulario button {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--color-carbon);
+  border-radius: 0;
+  background-color: var(--color-rosa);
+  color: var(--color-carbon);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.contacto__formulario button:hover {
+  background-color: var(--color-carbon);
+  color: var(--color-blanco);
+}
+
+.contacto__respuesta {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.contacto__respuesta--error {
+  color: #ffe2e2;
+}
+
+.contacto__respuesta--exito {
+  color: var(--color-blanco);
+}
+
+@media (min-width: 768px) {
+  #contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    padding: 4rem 2rem;
+  }
+
+  .contacto__numero {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+  }
+
+  .contacto__contenido {
+    margin-bottom: 0;
+  }
+
+  #titulo-contacto {
+    font-size: 3rem;
+  }
+
+  .contacto__formulario button {
+    width: auto;
+    min-width: 12rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  #contacto {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 6rem;
+    padding: 6rem 4rem;
+  }
+
+  .contacto__numero {
+    grid-column: 1 / -1;
+  }
+
+  .contacto__contenido {
+    max-width: 34rem;
+    margin-bottom: 0;
+  }
+
+  #titulo-contacto {
+    font-size: 4rem;
+    letter-spacing: -0.12rem;
+  }
+
+  .contacto__formulario {
+    width: 100%;
+    max-width: 42rem;
+    justify-self: end;
+  }
+
+  .contacto__formulario button {
+    width: auto;
+    min-width: 13rem;
+  }
+}
