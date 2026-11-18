@@ -1,6 +1,8 @@
+/* SECCIÓN API REST - REPOSITORIOS GITHUB */
+
 .repositorios-github {
   padding: 3rem 1.25rem;
-  background-color: var(--color-hueso);
+  background-color: #e2dfd9;
   color: var(--color-carbon);
 }
 
@@ -23,11 +25,15 @@
   text-transform: uppercase;
 }
 
+/* LISTA DE REPOSITORIOS */
+
 .repositorios-github__lista {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
 }
+
+/* TARJETAS */
 
 .repositorios-github__tarjeta {
   display: flex;
@@ -61,6 +67,8 @@
   font-weight: 700;
 }
 
+/* ENLACES */
+
 .repositorios-github__tarjeta a {
   align-self: flex-start;
   padding: 0.75rem 1rem;
@@ -77,6 +85,8 @@
   text-decoration: none;
 }
 
+/* TABLET - 768 PX */
+
 @media (min-width: 768px) {
   .repositorios-github {
     padding: 4rem 2rem;
@@ -90,6 +100,8 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+/* ESCRITORIO - 1024 PX */
 
 @media (min-width: 1024px) {
   .repositorios-github {

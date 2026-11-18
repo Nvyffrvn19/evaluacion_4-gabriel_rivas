@@ -8,7 +8,7 @@ export function Home() {
     <>
       <section className="portada" aria-labelledby="titulo-portada">
         <div className="portada__contenido">
-          <p className="portada__etiqueta">Portfolio Gabriel Rivas</p>
+          <p className="portada__etiqueta">Portfolio de Gabriel Rivas</p>
 
           <h1 className="portada__titulo" id="titulo-portada">
             Clean Fit,
@@ -26,13 +26,13 @@ export function Home() {
               Ver proyectos
             </Link>
 
-            <Link className="portada__acciones" to="/contacto">
+            <Link className="portada__boton" to="/contacto">
               Contacto
             </Link>
           </div>
         </div>
 
-        <figure>
+        <figure className="portada__imagen">
           <img src={portada} alt="Retrato de Marca Personal de Gabriel Rivas" />
         </figure>
       </section>

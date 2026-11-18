@@ -1,16 +1,19 @@
+/* SECCIÓN PROYECTOS - DISEÑO ORIGINAL E2 */
+
 .proyectos {
   width: 100%;
-  padding: 3rem 1.25rem 5rem;
+  padding: 3rem 1.25rem;
+  background-color: var(--color-carbon);
+  color: var(--color-blanco);
 }
 
 .proyectos__encabezado {
-  max-width: 55rem;
   margin-bottom: 2.5rem;
 }
 
 .proyectos__etiqueta {
   margin-bottom: 1rem;
-  color: var(--color-camisa);
+  color: var(--color-denim);
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.08rem;
@@ -18,20 +21,25 @@
 }
 
 .proyectos__titulo {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
   font-family: var(--fuente-titulos);
-  font-size: clamp(2.5rem, 8vw, 5rem);
-  line-height: 1.1;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.08rem;
   text-transform: uppercase;
   overflow-wrap: break-word;
 }
 
 .proyectos__descripcion {
-  max-width: 40rem;
+  max-width: 38rem;
   margin-bottom: 0;
+  color: var(--color-denim);
   font-size: 1rem;
-  line-height: 1.7;
+  line-height: 1.5;
 }
+
+/* FILTROS AÑADIDOS EN E4 */
 
 .proyectos__filtros {
   display: flex;
@@ -42,9 +50,10 @@
 
 .proyectos__filtro {
   padding: 0.75rem 1rem;
-  border: 1px solid var(--color-carbon);
+  border: 1px solid var(--color-denim);
+  border-radius: 0;
   background-color: transparent;
-  color: var(--color-carbon);
+  color: var(--color-blanco);
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -55,52 +64,72 @@
 
 .proyectos__filtro:hover {
   background-color: var(--color-denim);
+  color: var(--color-carbon);
 }
 
 .proyectos__filtro--activo,
 .proyectos__filtro--activo:hover {
-  background-color: var(--color-carbon);
-  color: var(--color-blanco);
+  border-color: var(--color-rosa);
+  background-color: var(--color-rosa);
+  color: var(--color-carbon);
 }
 
 .proyectos__contador {
   margin-bottom: 1.5rem;
-  color: var(--color-camisa);
+  color: var(--color-denim);
   font-size: 0.85rem;
   font-weight: 700;
 }
 
+/* CUADRÍCULA ORIGINAL */
+
 .proyectos__cuadricula {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 2.5rem;
 }
 
 .proyectos__vacio {
   padding: 3rem 1.5rem;
-  border: 1px dashed var(--color-carbon);
+  border: 1px dashed var(--color-denim);
+  color: var(--color-blanco);
   text-align: center;
   font-weight: 500;
 }
 
+/* TABLET - E2 */
+
 @media (min-width: 768px) {
   .proyectos {
-    padding: 4rem 2rem 6rem;
+    padding: 4rem 2rem;
+  }
+
+  .proyectos__titulo {
+    font-size: 3rem;
   }
 
   .proyectos__cuadricula {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2rem;
+    gap: 2.5rem 1.5rem;
   }
 }
 
-@media (min-width: 1200px) {
+/* ESCRITORIO - E2 */
+
+@media (min-width: 1024px) {
   .proyectos {
-    padding: 5rem 4rem 7rem;
+    padding: 6rem 4rem;
+  }
+
+  .proyectos__titulo {
+    margin-bottom: 4rem;
+    font-size: 4rem;
+    letter-spacing: -0.12rem;
   }
 
   .proyectos__cuadricula {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
   }
 }
 

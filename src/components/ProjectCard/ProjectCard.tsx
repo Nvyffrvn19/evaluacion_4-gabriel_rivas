@@ -3,9 +3,10 @@ import "./ProjectCard.module.css";
 
 interface PropiedadesTarjeta {
   proyecto: Proyecto;
+  numero: number;
 }
 
-export function ProjectCard({ proyecto }: PropiedadesTarjeta) {
+export function ProjectCard({ proyecto, numero }: PropiedadesTarjeta) {
   return (
     <article className="tarjeta-proyecto">
       <div className="tarjeta-proyecto__imagen">
@@ -17,6 +18,10 @@ export function ProjectCard({ proyecto }: PropiedadesTarjeta) {
       </div>
 
       <div className="tarjeta-proyecto__contenido">
+        <p className="tarjeta-proyecto__numero">
+          {String(numero).padStart(2, "0")}
+        </p>
+
         <span className="tarjeta-proyecto__categoria">
           {proyecto.categoria}
         </span>

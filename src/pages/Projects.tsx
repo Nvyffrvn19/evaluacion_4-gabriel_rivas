@@ -61,8 +61,12 @@ export function Projects() {
 
       {proyectosFiltrados.length > 0 ? (
         <div className="proyectos__cuadricula">
-          {proyectosFiltrados.map((proyecto) => (
-            <ProjectCard key={proyecto.id} proyecto={proyecto} />
+          {proyectosFiltrados.map((proyecto, indice) => (
+            <ProjectCard
+              key={proyecto.id}
+              proyecto={proyecto}
+              numero={indice + 1}
+            />
           ))}
         </div>
       ) : (

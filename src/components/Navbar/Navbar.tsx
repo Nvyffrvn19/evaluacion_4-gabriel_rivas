@@ -1,39 +1,37 @@
 import { NavLink } from "react-router-dom";
-import "./NavBar.module.css";
+import styles from "./Navbar.module.css";
 
 export function Navbar() {
   const obtenerClaseEnlace = ({ isActive }: { isActive: boolean }): string =>
-    isActive
-      ? "navegacion__enlace navegacion__enlace--activo"
-      : "navegacion__enlace";
+    isActive ? `${styles.enlace} ${styles.enlaceActivo}` : styles.enlace;
 
   return (
-    <header className="navegacion">
-      <NavLink className="navegacion__marca" to="/">
+    <header className={styles.navegacion}>
+      <NavLink className={styles.marca} to="/">
         Gabriel Rivas
       </NavLink>
 
-      <nav className="navegacion__menu" aria-label="Navegación principal">
-        <ul className="navegacion__lista">
-          <li className="navegacion__elemento">
+      <nav className={styles.menu} aria-label="Navegación principal">
+        <ul className={styles.lista}>
+          <li>
             <NavLink className={obtenerClaseEnlace} to="/" end>
               Inicio
             </NavLink>
           </li>
 
-          <li className="navegacion__elemento">
+          <li>
             <NavLink className={obtenerClaseEnlace} to="/proyectos">
               Proyectos
             </NavLink>
           </li>
 
-          <li className="navegacion__elemento">
+          <li>
             <NavLink className={obtenerClaseEnlace} to="/sobre-mi">
               Sobre mí
             </NavLink>
           </li>
 
-          <li className="navegacion__elemento">
+          <li>
             <NavLink className={obtenerClaseEnlace} to="/contacto">
               Contacto
             </NavLink>

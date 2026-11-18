@@ -1,16 +1,22 @@
 import { Link } from "react-router-dom";
-import "./Footer.module.css";
+import styles from "./Footer.module.css";
 
 export function Footer() {
   return (
-    <footer className="pie-pagina">
-      <p className="pie-pagina__derechos">
-        &copy; {new Date().getFullYear()} Gabriel Rivas. Todos los derechos
-        reservados.
-      </p>
+    <footer className={styles.piePagina}>
+      <p className={styles.derechos}>© 2026 Gabriel Rivas</p>
 
-      <Link className="pie-pagina__enlace" to={"/"}>
-        Volver al inicio
+      <Link
+        className={styles.enlace}
+        to="/"
+        onClick={() => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}
+      >
+        Volver arriba ↑
       </Link>
     </footer>
   );
