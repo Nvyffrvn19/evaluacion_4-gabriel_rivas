@@ -1,0 +1,111 @@
+.proyectos {
+  width: 100%;
+  padding: 3rem 1.25rem 5rem;
+}
+
+.proyectos__encabezado {
+  max-width: 55rem;
+  margin-bottom: 2.5rem;
+}
+
+.proyectos__etiqueta {
+  margin-bottom: 1rem;
+  color: var(--color-camisa);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+}
+
+.proyectos__titulo {
+  margin-bottom: 1.5rem;
+  font-family: var(--fuente-titulos);
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  line-height: 1.1;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+}
+
+.proyectos__descripcion {
+  max-width: 40rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.proyectos__filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.proyectos__filtro {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-carbon);
+  background-color: transparent;
+  color: var(--color-carbon);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.proyectos__filtro:hover {
+  background-color: var(--color-denim);
+}
+
+.proyectos__filtro--activo,
+.proyectos__filtro--activo:hover {
+  background-color: var(--color-carbon);
+  color: var(--color-blanco);
+}
+
+.proyectos__contador {
+  margin-bottom: 1.5rem;
+  color: var(--color-camisa);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.proyectos__cuadricula {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.proyectos__vacio {
+  padding: 3rem 1.5rem;
+  border: 1px dashed var(--color-carbon);
+  text-align: center;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .proyectos {
+    padding: 4rem 2rem 6rem;
+  }
+
+  .proyectos__cuadricula {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .proyectos {
+    padding: 5rem 4rem 7rem;
+  }
+
+  .proyectos__cuadricula {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .proyectos__filtro {
+    transition: none;
+  }
+}

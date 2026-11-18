@@ -1,0 +1,101 @@
+.tarjeta-proyecto {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-carbon);
+}
+
+.tarjeta-proyecto__imagen {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--color-denim);
+}
+
+.tarjeta-proyecto__imagen img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-proyecto:hover .tarjeta-proyecto__imagen img {
+  transform: scale(1.04);
+}
+
+.tarjeta-proyecto__contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.tarjeta-proyecto__categoria {
+  color: var(--color-camisa);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+}
+
+.tarjeta-proyecto__titulo {
+  margin: 0;
+  font-family: var(--fuente-titulos);
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.tarjeta-proyecto__descripcion {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.tarjeta-proyecto__tecnologias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.tarjeta-proyecto__tecnologia {
+  padding: 0.35rem 0.65rem;
+  background-color: var(--color-hueso);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.tarjeta-proyecto__enlace {
+  display: inline-block;
+  padding: 0.65rem 0;
+  border-bottom: 2px solid var(--color-carbon);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.tarjeta-proyecto__enlace:hover {
+  color: var(--color-rosa);
+}
+
+@media (min-width: 768px) {
+  .tarjeta-proyecto__contenido {
+    padding: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tarjeta-proyecto__imagen img {
+    transition: none;
+  }
+
+  .tarjeta-proyecto:hover .tarjeta-proyecto__imagen img {
+    transform: none;
+  }
+}
