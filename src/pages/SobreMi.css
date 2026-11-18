@@ -1,0 +1,147 @@
+/* SOBRE MÍ — DISEÑO ORIGINAL EVALUACIÓN N.º 2 */
+
+#sobre-mi {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 3rem 1.25rem;
+  background-color: var(--color-hueso);
+  color: var(--color-carbon);
+}
+
+#sobre-mi > .sobre-mi__numero {
+  margin-bottom: 1.5rem;
+  color: var(--color-camisa);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+}
+
+.sobre-mi__imagen {
+  margin: 0 0 2rem;
+}
+
+.sobre-mi__imagen img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+#titulo-sobre-mi {
+  margin-bottom: 1.5rem;
+  font-family: var(--fuente-titulos);
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.08rem;
+  text-transform: uppercase;
+}
+
+.sobre-mi__descripcion {
+  max-width: 38rem;
+  margin-bottom: 2rem;
+  font-family: var(--fuente-textos);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.sobre-mi__herramientas {
+  margin-bottom: 2rem;
+}
+
+.sobre-mi__herramientas h2,
+.sobre-mi__intereses h2 {
+  margin-bottom: 1rem;
+  font-family: var(--fuente-textos);
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+}
+
+.sobre-mi__herramientas ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sobre-mi__herramientas li {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-carbon);
+  font-size: 0.85rem;
+}
+
+.sobre-mi__intereses p {
+  margin-bottom: 0;
+  color: var(--color-camisa);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* TABLETA — 768 PX */
+
+@media (min-width: 768px) {
+  #sobre-mi {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    padding: 4rem 2rem;
+  }
+
+  #sobre-mi > .sobre-mi__numero {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+  }
+
+  .sobre-mi__imagen {
+    margin-bottom: 0;
+  }
+
+  .sobre-mi__contenido {
+    align-self: center;
+  }
+
+  #titulo-sobre-mi {
+    font-size: 3rem;
+  }
+}
+
+/* ESCRITORIO — 1024 PX */
+
+@media (min-width: 1024px) {
+  #sobre-mi {
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 5rem;
+    padding: 6rem 4rem;
+  }
+
+  #sobre-mi > .sobre-mi__numero {
+    grid-column: 1 / -1;
+  }
+
+  .sobre-mi__imagen {
+    width: 100%;
+    max-width: 32rem;
+    margin-bottom: 0;
+  }
+
+  .sobre-mi__contenido {
+    width: 100%;
+    max-width: 42rem;
+    align-self: center;
+  }
+
+  #titulo-sobre-mi {
+    font-size: 4rem;
+    letter-spacing: -0.12rem;
+  }
+
+  .sobre-mi__descripcion {
+    font-size: 1.05rem;
+  }
+}
